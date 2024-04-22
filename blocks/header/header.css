@@ -270,7 +270,8 @@ header .header-topbar {
   /* Telekom
   background-color: #e20074; */
   background-color: #ebebeb;
-  color: var(--text-color-light);
+  /* color: var(--text-color-light); */
+  color: #000;
   display: flex;
   justify-content: space-between;
   font-size: var(--body-font-size-xs);
