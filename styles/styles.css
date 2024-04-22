@@ -169,8 +169,12 @@ a.button:any-link, button {
   color: var(--button-text-color);
   background-color: var(--button-background-color);
   */
+ /* Telekom
   color: white;
-  background-color: #e20074;
+  background-color: #e20074; */
+
+color: white;
+  background-color: #039a9a;
   text-transform: uppercase;
   font-size: 14px;
   padding: var(--button-padding);
