@@ -65,7 +65,7 @@ main .form-container {
 }
 
 main .form {
-    background-color: var(--form-background-color);
+    /* background-color: var(--form-background-color); */
 }
 
 main .form > div:not(:first-child) {
