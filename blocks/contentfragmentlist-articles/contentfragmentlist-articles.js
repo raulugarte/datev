@@ -123,8 +123,6 @@ function getImageUrl(image, isUE) {
         return image["_authorUrl"];
     }
     const url = new URL(image["_publishUrl"]);
-    console.log(`https://${url.hostname}${image["_dynamicUrl"]}`);
-    window.prompt("hallo")
     return `https://${url.hostname}${image["_dynamicUrl"]}`
     
     /*return `${image["_publishUrl"]}`*/
