@@ -86,6 +86,10 @@ async function getCategories(persistedQuery, isUE) {
         };
     });
 }
+
+console(_path)
+
+
 /**
  * Detects whether the site is embedded in the universal editor by counting parent frames
  * @returns {boolean}
