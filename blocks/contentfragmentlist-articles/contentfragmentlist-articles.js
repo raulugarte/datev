@@ -58,13 +58,13 @@ async function getCategories(persistedQuery, isUE) {
     /*const items = json?.data?.adventureList?.items || [] */
     
     /* RUg test*/
-    const items = json?.data?.articlePaginated?.edges.node || []
+    const items = json?.data?.articlePaginated?.edges || []
 
     return items.map((item) => {
         /*const imageUrl = getImageUrl(item.image, isUE);*/
         const imageUrl = getImageUrl(item.featuredImage, isUE);
         return {
-            _path: item._path,
+            _path: item.node._path,
             title: item.title,
             /*description: item.description["plaintext"],*/
             description: item.main["plaintext"],
