@@ -87,8 +87,6 @@ async function getCategories(persistedQuery, isUE) {
     });
 }
 
-console.log(items.map)
-
 
 /**
  * Detects whether the site is embedded in the universal editor by counting parent frames
