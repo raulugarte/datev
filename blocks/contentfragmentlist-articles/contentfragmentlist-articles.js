@@ -87,7 +87,7 @@ async function getCategories(persistedQuery, isUE) {
     });
 }
 
-console(_path)
+console(items.map)
 
 
 /**
