@@ -122,8 +122,9 @@ function getImageUrl(image, isUE) {
     if (isUE) { 
         return image["_authorUrl"];
     }
-    const url = new URL(image["_publishUrl"])
+    const url = new URL(image["_publishUrl"]);
+    console.log(`https://${url.hostname}${image["_dynamicUrl"]}`);
     return `https://${url.hostname}${image["_dynamicUrl"]}`
-    console.log(`https://${url.hostname}${image["_dynamicUrl"]}`)
+    
     /*return `${image["_publishUrl"]}`*/
 }
