@@ -5,6 +5,8 @@
 
 .columns img {
     width: 100%;
+    /* RUG */
+    height:100%
 }
 
 @media (min-width: 900px) {
@@ -22,5 +24,8 @@
 
     .columns > div > div:first-of-type {
         margin-left: unset;
+        /* RUG */
+        height: 338px;
+        
     }
 }
