@@ -55,16 +55,19 @@ async function getCategories(persistedQuery, isUE) {
         credentials: "include"
     }).then((response) => response.json());
     /*const items = json?.data?.categoryList?.items || [] */
-    const items = json?.data?.adventureList?.items || []
+    /*const items = json?.data?.adventureList?.items || [] */
+    
+    /* RUg test*/
+    const items2 = json?.data?.articleList?.items || []
 
     return items.map((item) => {
         /*const imageUrl = getImageUrl(item.image, isUE);*/
-        const imageUrl = getImageUrl(item.primaryImage, isUE);
+        const imageUrl = getImageUrl(item.featuredImage, isUE);
         return {
             _path: item._path,
             title: item.title,
             /*description: item.description["plaintext"],*/
-            description: item.slug["plaintext"],
+            description: item.main["plaintext"],
             cta: { 
                 text: item.ctaText,
                 link: item.ctaLink,
