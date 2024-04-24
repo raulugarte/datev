@@ -1,4 +1,4 @@
-.cards > ul {
+.cards2 > ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -7,33 +7,33 @@
   grid-gap: 16px;
 }
 
-.cards > ul > li {
+.cards2 > ul > li {
   /* border: 1px solid var(--highlight-background-color); */
   background-color: red;
 }
 
-.cards .cards-card-body {
+.cards2 .cards-card-body {
   margin: 16px;
   text-align: left;
 }
 
-.cards .cards-card-body h3 {
+.cards2 .cards-card-body h3 {
   font-size: var(--body-font-size-xs);
 }
 
-.cards .cards-card-body h5 {
+.cards2 .cards-card-body h5 {
   font-size: var(--body-font-size-xxs);
 }
 
-.cards .cards-card-image {
+.cards2 .cards-card-image {
   line-height: 0;
 }
 
-.cards .cards-card-body > *:first-child {
+.cards2 .cards-card-body > *:first-child {
   margin-top: 0;
 }
 
-.cards > ul > li img {
+.cards2 > ul > li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
