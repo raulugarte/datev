@@ -58,7 +58,7 @@ async function getCategories(persistedQuery, isUE) {
     /*const items = json?.data?.adventureList?.items || [] */
     
     /* RUg test*/
-    const items = json?.data?.articlePaginated?.items || []
+    const items = json?.data?.articlePaginated?.edges || []
 
     return items.map((item) => {
         /*const imageUrl = getImageUrl(item.image, isUE);*/
