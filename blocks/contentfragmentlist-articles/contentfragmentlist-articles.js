@@ -58,16 +58,16 @@ async function getCategories(persistedQuery, isUE) {
     /*const items = json?.data?.adventureList?.items || [] */
     
     /* RUg test*/
-    const items = json?.data?.articlePaginated?.edges || []
+    const items = json?.data?.articleList?.items || []
 
     return items.map((item) => {
         /*const imageUrl = getImageUrl(item.image, isUE);*/
-        const imageUrl = getImageUrl(item.node.featuredImage, isUE);
+        const imageUrl = getImageUrl(item.featuredImage, isUE);
         return {
-            _path: item.node._path,
-            title: item.node.title,
+            _path: item._path,
+            title: item.title,
             /*description: item.description["plaintext"],*/
-            description: item.node.main["plaintext"],
+            description: item.main["plaintext"],
             /* cta: { 
                 text: item.ctaText,
                 link: item.ctaLink,
@@ -78,10 +78,10 @@ async function getCategories(persistedQuery, isUE) {
                 /*width: item.image["width"],*/
                 /*height: item.image["height"],*/
                 /*mimeType: item.image["mimeType"],*/
-                deliveryUrl: getImageUrl(item.node.primaryImage, false),
-                width: item.node.featuredImage["width"],
-                height: item.node.featuredImage["height"],
-                mimeType: item.node.featuredImage["mimeType"],
+                deliveryUrl: getImageUrl(item.featuredImage, false),
+                width: item.featuredImage["width"],
+                height: item.featuredImage["height"],
+                mimeType: item.featuredImage["mimeType"],
             },
         };
     });
