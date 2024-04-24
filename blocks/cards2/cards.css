@@ -12,24 +12,24 @@
   background-color: red;
 }
 
-.cards2 .cards-card-body {
+.cards2 .cards-card-body2 {
   margin: 16px;
   text-align: left;
 }
 
-.cards2 .cards-card-body h3 {
+.cards2 .cards-card-body2 h3 {
   font-size: var(--body-font-size-xs);
 }
 
-.cards2 .cards-card-body h5 {
+.cards2 .cards-card-body2 h5 {
   font-size: var(--body-font-size-xxs);
 }
 
-.cards2 .cards-card-image {
+.cards2 .cards-card-image2 {
   line-height: 0;
 }
 
-.cards2 .cards-card-body > *:first-child {
+.cards2 .cards-card-body2 > *:first-child {
   margin-top: 0;
 }
 
