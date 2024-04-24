@@ -68,10 +68,10 @@ async function getCategories(persistedQuery, isUE) {
             title: item.node.title,
             /*description: item.description["plaintext"],*/
             description: item.node.main["plaintext"],
-            cta: { 
+            /* cta: { 
                 text: item.ctaText,
                 link: item.ctaLink,
-            },
+            }, */
             image: {
                 url: imageUrl,
                 /*deliveryUrl: getImageUrl(item.image, false),*/
@@ -79,9 +79,9 @@ async function getCategories(persistedQuery, isUE) {
                 /*height: item.image["height"],*/
                 /*mimeType: item.image["mimeType"],*/
                 deliveryUrl: getImageUrl(item.node.primaryImage, false),
-                width: item.node.primaryImage["width"],
-                height: item.node.primaryImage["height"],
-                mimeType: item.node.primaryImage["mimeType"],
+                width: item.node.featuredImage["width"],
+                height: item.node.featuredImage["height"],
+                mimeType: item.node.featuredImage["mimeType"],
             },
         };
     });
