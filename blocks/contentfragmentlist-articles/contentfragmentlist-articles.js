@@ -1,4 +1,3 @@
-
 export default async function decorate(block) {
     const isUE = isUniversalEditorActive();
     const persistedQuery = (isUE) ? useAuthorQuery(block.textContent) : block.textContent;
@@ -55,39 +54,36 @@ async function getCategories(persistedQuery, isUE) {
         credentials: "include"
     }).then((response) => response.json());
     /*const items = json?.data?.categoryList?.items || [] */
-    /*const items = json?.data?.adventureList?.items || [] */
-    
-    /* RUg test*/
-    const items = json?.data?.articleList?.items || []
+    const items = json?.data?.adventureList?.items || [];
+
+ 
 
     return items.map((item) => {
         /*const imageUrl = getImageUrl(item.image, isUE);*/
-        const imageUrl = getImageUrl(item.featuredImage, isUE);
+        const imageUrl = getImageUrl(item.primaryImage, isUE);
         return {
             _path: item._path,
             title: item.title,
             /*description: item.description["plaintext"],*/
-            description: item.main["plaintext"],
-            /* cta: { 
+            description: item.slug["plaintext"],
+            cta: { 
                 text: item.ctaText,
                 link: item.ctaLink,
-            }, */
+            },
             image: {
                 url: imageUrl,
                 /*deliveryUrl: getImageUrl(item.image, false),*/
                 /*width: item.image["width"],*/
                 /*height: item.image["height"],*/
                 /*mimeType: item.image["mimeType"],*/
-                deliveryUrl: getImageUrl(item.featuredImage, false),
-                width: item.featuredImage["width"],
-                height: item.featuredImage["height"],
-                mimeType: item.featuredImage["mimeType"],
+                deliveryUrl: getImageUrl(item.primaryImage, false),
+                width: item.primaryImage["width"],
+                height: item.primaryImage["height"],
+                mimeType: item.primaryImage["mimeType"],
             },
         };
     });
 }
-
-
 /**
  * Detects whether the site is embedded in the universal editor by counting parent frames
  * @returns {boolean}
@@ -122,8 +118,7 @@ function getImageUrl(image, isUE) {
     if (isUE) { 
         return image["_authorUrl"];
     }
-    const url = new URL(image["_publishUrl"]);
+    const url = new URL(image["_publishUrl"])
     return `https://${url.hostname}${image["_dynamicUrl"]}`
-    
     /*return `${image["_publishUrl"]}`*/
 }
