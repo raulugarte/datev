@@ -22,6 +22,15 @@
   
 }
 
+.category-list > category-item img
+{
+  width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 9px;
+    box-shadow: 9px 20px 12px #ebebeb;
+}
+
 .category-item-content {
     padding: 75px 75px 75px 75px;
 }
