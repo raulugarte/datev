@@ -29,3 +29,11 @@
 .category-item > div {
     flex: 1 1 50%;
 }
+
+.category-item-image{
+    width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 9px;
+  box-shadow: 9px 20px 12px #ebebeb;
+}
