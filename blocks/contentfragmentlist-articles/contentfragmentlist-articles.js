@@ -82,7 +82,7 @@ async function getCategories(persistedQuery, isUE) {
                 width: item.featuredImage["width"],
                 height: item.featuredImage["height"],
                 mimeType: item.featuredImage["mimeType"],
-            },
+            }
         };
     });
 }
