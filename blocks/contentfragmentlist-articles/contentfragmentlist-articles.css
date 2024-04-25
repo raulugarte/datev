@@ -6,7 +6,7 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 16px;
 }
-.category-item-image > img {
+.category-item-image img {
     width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
