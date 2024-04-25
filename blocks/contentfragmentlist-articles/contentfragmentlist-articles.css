@@ -12,10 +12,14 @@
 }
 
 .category-item {
+  /*
     margin: 75px 75px 75px 75px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+  */
+  background-color: transparent;
+  
 }
 
 .category-item-content {
