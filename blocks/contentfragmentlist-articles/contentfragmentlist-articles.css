@@ -30,7 +30,17 @@
 }
 
 
-
+.category-item-desc {
+    color: #5a5760
+  max-width: 300px;
+  -webkit-line-clamp: 2;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
 
  /*
 .category-list:nth-child(even) {
@@ -45,17 +55,6 @@
     border-radius: 9px;
     box-shadow: 9px 20px 12px #ebebeb;
 }
-
-
-
-
-
-
-.category-item-desc {
-    color: #5a5760
-}
-
-
 
 .category-item > div {
     flex: 1 1 50%;
