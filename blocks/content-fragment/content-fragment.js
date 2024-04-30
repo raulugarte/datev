@@ -28,6 +28,7 @@ export default function decorate(block) {
 
   /* RUG */
   const slug2 = block.textContent.slice(24,39);
+  const requestRUG = aem + '/graphql/execute.json/aem-demo-assets/adventure-by-slug;slug=' + slug2;
 
   //fetch(aem + '/graphql/execute.json/aem-demo-assets/adventures-by-slug;slug=' + slug)
 // fetch(aem + '/graphql/execute.json/aem-demo-assets/adventure-by-slug;slug=' + slug)
