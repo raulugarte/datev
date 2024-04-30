@@ -27,10 +27,11 @@ export default function decorate(block) {
   quoteDiv.replaceWith(adventureDiv);
 
   /* RUG */
-  slug = block.textContent.slice(24,39);
+  const slug2 = block.textContent.slice(24,39);
 
   //fetch(aem + '/graphql/execute.json/aem-demo-assets/adventures-by-slug;slug=' + slug)
-fetch(aem + '/graphql/execute.json/aem-demo-assets/adventure-by-slug;slug=' + slug)
+// fetch(aem + '/graphql/execute.json/aem-demo-assets/adventure-by-slug;slug=' + slug)
+  fetch(aem + '/graphql/execute.json/aem-demo-assets/adventure-by-slug;slug=' + slug2)
 .then(response => response.json())
 .then(response => {
 
