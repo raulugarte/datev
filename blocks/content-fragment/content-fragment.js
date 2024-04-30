@@ -29,7 +29,7 @@ export default function decorate(block) {
   /* RUG */
   const slug2 = slugTemp.toString().slice(39,56);
   const requestRUG = aem + '/graphql/execute.json/aem-demo-assets/adventure-by-slug;slug=' + slug2;
-  const json = await fetch(requestRUG, {
+  const json = fetch(requestRUG, {
         credentials: "include"
     }).then((response) => response.json());
 
